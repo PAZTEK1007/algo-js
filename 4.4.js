@@ -1,16 +1,24 @@
 let inputAr = ["Mathias", "Antoine", "Pierre", "Thomas", "Alexande.V", "Alexande", "Bastien", "Carole" , "Dorian", "Elisabeth" , "Elodie", "Justin", "Justine L" , "Justine" , "Kimi", "Layla", "Lidwine", "Lucas" , "Marie", "Okly", "Robin", "Rosalie", "Stephane", "Tim", "Valentin" ,"Virginie"];
-function rand10(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
 
 function pickLearner(inputAr, n) {
+
+    let randomLearners = [];
+
+    for (let i = 0; i < n; i++) {
+
+        let randomIndex = Math.floor(Math.random() * inputAr.length);
+        randomLearners.push(inputAr.splice(randomIndex, 1)[0]);
+    }
+
     if (n <= 0 || n > inputAr.length) {
-        alert("ERROR");
+
+        alert("ERROR MESSAGE //");
     }
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [inputAr[i], inputAr[j]] = [inputAr[j], inputAr[i]];
-        }
-    }
+   
+    return randomLearners;
+
+}
+
+let n = +window.prompt("Type a number for randomize !");
+let randomLearners = pickLearner(inputAr, n);
+alert(randomLearners);
