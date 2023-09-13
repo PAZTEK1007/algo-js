@@ -4,9 +4,9 @@ function askTvSerie(){
     let TvSerie = {
 
         name: "Son's of Anarchy",
-        production: ["Fox 21", "FX Production", "The Linson Company", "Sutter Ink"],
+        production: 2008,
         membercast: ["Charlie Hunnam" ,"Mark Boone Junior" ,"Katey Sagal" ,"Kim Coates" ,"Tommy Flanagan" , "Ron Perlman"],
-        
+
     };
 
     return TvSerie;

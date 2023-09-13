@@ -13,11 +13,16 @@ function randomizeCast(TvSerie){
     return randomCast;
 }
 
+let name_ = prompt("What's your favourite TV serie ?");
+let production = +window.prompt("What year was the series produced?");
+let membercast = prompt("Which actor starred in the series?");
+let membercast_ = membercast.split(",");
+
 let TvSerie = {
 
-    name: "Son's of Anarchy",
-    production: ["Fox 21", "FX Production", "The Linson Company", "Sutter Ink"],
-    membercast: ["Charlie Hunnam" ,"Mark Boone Junior" ,"Katey Sagal" ,"Kim Coates" ,"Tommy Flanagan" , "Ron Perlman"],
+    name: name_,
+    production: production,
+    membercast: membercast_,
 
 };
 
